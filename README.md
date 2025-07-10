@@ -34,6 +34,34 @@ Claude Code is optimized for agentic coding - AI that acts with autonomy and awa
 - Integrates with GitHub, GitLab, VS Code, and JetBrains IDEs
 - Designed for flexibility, transparency, and developer control
 
+## 🔧 Custom Slash Commands
+
+This repository includes a collection of custom slash commands designed to streamline development workflows with Claude Code. Use `/help-commands` to get detailed information about all available commands.
+
+### Project Management & Documentation
+
+- [`/custom-init`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/custom-init.md)  
+  Automatically generates comprehensive CLAUDE.md files for any project by analyzing project structure, technology stack, and development patterns.
+
+- [`/help-commands`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/help-commands.md)  
+  Provides comprehensive help documentation for all available custom commands, including usage examples and best practices.
+
+### Version Control & Git
+
+- [`/commit`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/commit.md)  
+  Creates well-formatted conventional commits following best practices with automatic staging, diff analysis, and atomic commit recommendations.
+
+- [`/issue`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/issue.md)  
+  End-to-end GitHub issue resolution following GitHub Flow with automated planning, branch creation, and incremental implementation.
+
+- [`/reviewpr`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/reviewpr.md)  
+  Comprehensive pull request review process with CI/CD checks, code quality analysis, and structured feedback via GitHub CLI.
+
+### Code Analysis & Testing
+
+- [`/test`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/test.md)  
+  Comprehensive test execution and improvement with framework detection, targeted test runs, coverage analysis, and automated fixes.
+
 
 ## 📚 Claude Code Documentation
 
@@ -72,4 +100,5 @@ _"Learn about common workflows with Claude Code. Each task in this document incl
 
 ## 🔗 Related:
 
-- [`Awesome Claude Code`](https://github.com/hesreallyhim/awesome-claude-code) by [hesreallyhim](https://github.com/hesreallyhim) 
+- [`Awesome Claude Code`](https://github.com/hesreallyhim/awesome-claude-code) by [hesreallyhim](https://github.com/hesreallyhim)  
+  _"This is a curated list of slash-commands, CLAUDE.md files, CLI tools, and other resources and guides for enhancing your Claude Code workflow, productivity, and vibes."_
