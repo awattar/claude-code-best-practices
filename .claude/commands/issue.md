@@ -74,8 +74,16 @@ Verify your changes work correctly:
 4. If the tests are failing, fix them.
 5. Ensure that all tests are passing before moving on to the next step.
 
+## Best Practices for PRs
+
+When creating pull requests, follow these formatting requirements:
+
+- **PR Title**: Use the first (most significant) commit message from the branch as the PR title.
+- **PR Description**: Use a single-line description of the changes made.
+- **No additional content**: NEVER add any extra content to PR titles or descriptions such as "Generated with Claude Code", author information, or any other additions beyond the specified format.
+
 ## Deploy
 
 Prepare your changes for review and merge:
 
-1. Open a PR and request a review.
+1. Open a PR following the PR format requirements above and request a review.
