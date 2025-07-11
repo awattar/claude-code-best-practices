@@ -21,24 +21,44 @@ To create a commit, just type:
 
 - **Atomic commits**: Each commit should contain related changes that serve a single purpose (feature subtask, issue fix, documentation or configuration changes, etc.).
 - **Split large changes**: If changes touch multiple concerns, split them into separate description lines.
-- **Conventional commit format**: Use the format `<type>: <github_issue> - <description>.` or `<type>: <description>.` when GitHub issue cannot be identified:
+- **Conventional commit format** (MUST FOLLOW EXACTLY): Use the format `<type>: (#<issue_number>) <issue_name> - <description>.` or `<type>: <description>.` when GitHub issue cannot be identified:
   - Where `<type>` is one of:
     - `New feature`: A new feature.
     - `Fix issue`: A bug fix.
     - `Other`: Other changes (documentation, configuration, etc.).
-  - Where `<github_issue>` is GitHub issue number followed by the issue name `<github_issue_number> <github_issue_name>`.
+  - Where `<issue_number>` is the GitHub issue number.
+  - Where `<issue_name>` is GitHub issue name.
   - Where `<description>` is generated commit message.
-- **Multiline commit format**: Use the format  
+  - Line MUST end with a `.` (dot).
+- **Multiline commit format** (MUST FOLLOW EXACTLY): Use the format  
 
   ```
-  <type>: <github_issue>:
+  <type>: (#<issue_number>) <issue_name>:
   - <description_line_1>.
   - <description_line_2>.
   - ...
   ```
 
+  or use format when current issue is sub-issue of another issue:
+
+  ```
+  <type>: (#<parent_issue_number>) <parent_issue_name>:
+  - (#<issue_number>) <issue_name>.
+  - <description_line_1>.
+  - <description_line_2>.
+  - ...
+  ```
+
+  - Where `<parent_issue_number>` is the parent GitHub issue number.
+  - Where `<parent_issue_name>` is the parent GitHub issue name.
+  - Where `<issue_number>` is the GitHub issue number.
+  - Where `<issue_name>` is GitHub issue name.
   - Where `<description_line_X>` represents a message for a different concern.
+  - The first line MUST end with a `:` (colon).
+  - Each bullet point MUST end with a `.` (period).
+  - Each bullet point MUST start with `- ` (dash and space).
 - **Present tense, imperative mood**: Write commit messages as commands (e.g., "add feature" not "added feature").
+- **No additional content**: NEVER add any extra content to commit messages such as "Generated with Claude Code", author information, or any other additions beyond the specified format.
 
 ## Guidelines for Splitting Commits
 
