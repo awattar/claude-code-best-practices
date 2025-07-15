@@ -25,6 +25,7 @@ Follow these steps:
 Follow these best practices and tools throughout the process:
 
 - Follow GitHub flow in the process whenever possible - https://docs.github.com/en/get-started/using-github/github-flow
+- Use the `/commit` command consistently throughout development to maintain high-quality commit messages and conventional commit standards
 - Consider using context7 (https://github.com/upstash/context7) via MCP throughout the development process to capture important context, decisions, and progress. This helps with task continuity, collaboration, and knowledge preservation.
 - Identify the project's browser automation tool for UI testing. Ask if you're unsure whether to use puppeteer, playwright, selenium, or another tool.
 - Remember to use the GitHub CLI (`gh`) for all GitHub-related tasks.
@@ -62,7 +63,30 @@ Implement the solution following these steps:
 
 1. Create a new branch for the issue.
 2. Solve the issue in small, manageable steps, according to your plan.
-3. Commit your changes after each step.
+3. Use the /commit command to create well-formatted commits after each step.
+
+## Commit Guidelines
+
+When implementing changes for GitHub issues, use the `/commit` command to maintain consistency and follow conventional commit standards:
+
+### Benefits of Using /commit
+- **Automatic formatting**: Follows conventional commit format with proper issue linking
+- **Consistent messages**: Ensures all commits follow the same structure and quality
+- **Automatic staging**: Handles git add operations intelligently
+- **Issue integration**: Automatically formats commits with issue numbers and names
+- **Quality assurance**: Analyzes changes to suggest appropriate commit messages
+
+### Integration with Issue Workflow
+- Use `/commit` after each logical step in your implementation
+- The command will automatically detect the GitHub issue context
+- Commit messages will follow the format: `<type>: (#<issue_number>) <issue_name> - <description>.`
+- For complex changes, `/commit` can suggest breaking into multiple commits
+
+### Best Practices
+- Commit frequently using `/commit` to maintain clear development history
+- Each commit should represent a logical unit of work
+- Let `/commit` analyze your changes and suggest appropriate commit messages
+- Review the generated commit message before confirming
 
 ## Test
 
@@ -76,11 +100,20 @@ Verify your changes work correctly:
 
 ## Best Practices for PRs
 
-When creating pull requests, follow these formatting requirements:
+When creating pull requests, follow these guidelines:
 
 - **PR Title**: Use the first (most significant) commit message from the branch as the PR title.
-- **PR Description**: Use a single-line description of the changes made.
-- **No additional content**: NEVER add any extra content to PR titles or descriptions such as "Generated with Claude Code", author information, or any other additions beyond the specified format.
+- **PR Description**: GitHub will automatically populate the PR description using the template from `@.github/pull_request_template.md`
+- **Format**: Follow the template structure exactly as specified in the GitHub PR template
+- **Requirements**: Review the requirements listed at the bottom of the PR template before submitting
+
+### GitHub PR Template
+The repository includes a standardized PR template at `@.github/pull_request_template.md` that provides:
+- Structured format for Summary, Test plan, Key Changes, and Verification sections
+- Clear requirements and formatting guidelines
+- Consistent format across all pull requests
+
+When creating a PR, the template will automatically appear - simply fill in the relevant sections according to your changes.
 
 ## Deploy
 

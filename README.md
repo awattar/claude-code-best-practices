@@ -49,10 +49,10 @@ This repository includes a collection of custom slash commands designed to strea
 ### Version Control & Git
 
 - [`/commit`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/commit.md)  
-  Creates well-formatted conventional commits following best practices with automatic staging, diff analysis, and atomic commit recommendations.
+  Creates well-formatted conventional commits following best practices with automatic staging, diff analysis, and atomic commit recommendations. Uses standardized commit templates from [`.gitmessage`](https://github.com/awattar/claude-code-best-practices/blob/main/.gitmessage) and [`.github/COMMIT_CONVENTION.md`](https://github.com/awattar/claude-code-best-practices/blob/main/.github/COMMIT_CONVENTION.md).
 
 - [`/issue`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/issue.md)  
-  End-to-end GitHub issue resolution following GitHub Flow with automated planning, branch creation, and incremental implementation.
+  End-to-end GitHub issue resolution following GitHub Flow with automated planning, branch creation, and incremental implementation. Integrates with GitHub PR templates from [`.github/pull_request_template.md`](https://github.com/awattar/claude-code-best-practices/blob/main/.github/pull_request_template.md).
 
 - [`/reviewpr`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/commands/reviewpr.md)  
   Comprehensive pull request review process with CI/CD checks, code quality analysis, and structured feedback via GitHub CLI.

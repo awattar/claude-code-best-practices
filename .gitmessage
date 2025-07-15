@@ -1,0 +1,62 @@
+# Commit Message Template
+#
+# Conventional commit format (MUST FOLLOW EXACTLY):
+#
+# Single-line format:
+# <type>: (#<issue_number>) <issue_name> - <description>.
+# or when GitHub issue cannot be identified:
+# <type>: <description>.
+#
+# Multiline format:
+# <type>: (#<issue_number>) <issue_name>:
+# - <description_line_1>.
+# - <description_line_2>.
+# - ...
+#
+# Parent/child issue format:
+# <type>: (#<parent_issue_number>) <parent_issue_name>:
+# - (#<issue_number>) <issue_name>.
+# - <description_line_1>.
+# - <description_line_2>.
+# - ...
+#
+# Field Definitions:
+# - <type>: One of "New feature", "Fix issue", or "Other"
+# - <issue_number>: GitHub issue number
+# - <issue_name>: GitHub issue name/title
+# - <description>: Generated commit message describing the changes
+# - <parent_issue_number>: Parent GitHub issue number for sub-issues
+# - <parent_issue_name>: Parent GitHub issue name for sub-issues
+# - <description_line_X>: Message for a different concern in multiline format
+# - <summary>: Short summary of changes for post-review fixes
+#
+# Types:
+# - New feature: A new feature
+# - Fix issue: A bug fix
+# - Other: Other changes (documentation, configuration, etc.)
+#
+# Format Rules:
+# - Single-line format MUST end with a . (dot)
+# - Multiline format first line MUST end with : (colon)
+# - Each bullet point MUST end with . (period)
+# - Each bullet point MUST start with - (dash and space)
+# - Use present tense, imperative mood (e.g., "add feature" not "added feature")
+# - NEVER add extra content like "Generated with Claude Code", author info, etc.
+# - Post-review commits: Use multiline format with first bullet starting "Apply post-review fixes to <summary>"
+#
+# Examples:
+# New feature: (#123) Add user authentication - implement JWT-based login system.
+# Fix issue: (#456) Fix memory leak in data processor - optimize buffer management.
+# Other: Update documentation for API endpoints.
+#
+# Multiline example:
+# New feature: (#789) Implement dashboard analytics:
+# - Add user activity tracking components.
+# - Create data visualization charts.
+# - Integrate with reporting API.
+#
+# Post-review fixes example:
+# Fix issue: (#456) Fix memory leak in data processor:
+# - Apply post-review fixes to buffer management optimization.
+# - Update error handling for edge cases.
+# - Add missing null checks.

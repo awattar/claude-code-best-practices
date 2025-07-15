@@ -19,56 +19,25 @@ To create a commit, just type:
 
 ## Best Practices for Commits
 
-- **Atomic commits**: Each commit should contain related changes that serve a single purpose (feature subtask, issue fix, documentation or configuration changes, etc.).
-- **Split large changes**: If changes touch multiple concerns, split them into separate description lines.
-- **Conventional commit format** (MUST FOLLOW EXACTLY): Use the format `<type>: (#<issue_number>) <issue_name> - <description>.` or `<type>: <description>.` when GitHub issue cannot be identified:
-  - Where `<type>` is one of:
-    - `New feature`: A new feature.
-    - `Fix issue`: A bug fix.
-    - `Other`: Other changes (documentation, configuration, etc.).
-  - Where `<issue_number>` is the GitHub issue number.
-  - Where `<issue_name>` is GitHub issue name.
-  - Where `<description>` is generated commit message.
-  - Line MUST end with a `.` (dot).
-- **Multiline commit format** (MUST FOLLOW EXACTLY): Use the format  
+The `/commit` command follows standardized commit conventions and best practices. For detailed formatting rules and guidelines, refer to:
 
-  ```
-  <type>: (#<issue_number>) <issue_name>:
-  - <description_line_1>.
-  - <description_line_2>.
-  - ...
-  ```
+### Commit Format Templates
+- **Format reference**: `@.gitmessage` - Complete commit message format specification with examples
+- **Best practices**: `@.github/COMMIT_CONVENTION.md` - Detailed guidelines for atomic commits, splitting commits, and workflow integration
 
-  or use format when current issue is sub-issue of another issue:
+### Key Conventions
+- **Conventional commit format**: Follows standardized format with issue linking
+- **Atomic commits**: Each commit serves a single logical purpose
+- **Format enforcement**: Automatic validation of commit message structure
+- **Issue integration**: Automatic detection and formatting of GitHub issue references
 
-  ```
-  <type>: (#<parent_issue_number>) <parent_issue_name>:
-  - (#<issue_number>) <issue_name>.
-  - <description_line_1>.
-  - <description_line_2>.
-  - ...
-  ```
+### Setup Git Template (Optional)
+To use the commit message template with standard git commands:
+```bash
+git config commit.template .gitmessage
+```
 
-  - Where `<parent_issue_number>` is the parent GitHub issue number.
-  - Where `<parent_issue_name>` is the parent GitHub issue name.
-  - Where `<issue_number>` is the GitHub issue number.
-  - Where `<issue_name>` is GitHub issue name.
-  - Where `<description_line_X>` represents a message for a different concern.
-  - The first line MUST end with a `:` (colon).
-  - Each bullet point MUST end with a `.` (period).
-  - Each bullet point MUST start with `- ` (dash and space).
-- **Present tense, imperative mood**: Write commit messages as commands (e.g., "add feature" not "added feature").
-- **No additional content**: NEVER add any extra content to commit messages such as "Generated with Claude Code", author information, or any other additions beyond the specified format.
-
-## Guidelines for Splitting Commits
-
-When analyzing the diff, suggest splitting commits based on these criteria:
-
-1. **Unrelated concerns**: Changes to unrelated parts of the codebase.
-2. **Different types of changes**: Mixing features, fixes, major refactoring, etc.
-3. **File patterns**: Changes to different types of files (e.g., source code vs documentation).
-4. **Logical grouping**: Changes that would be easier to understand or review separately.
-5. **Size**: Very large changes that would be clearer if broken down.
+This will populate the commit message editor with the template format when using `git commit` without the `-m` flag.
 
 ## Important Notes
 
