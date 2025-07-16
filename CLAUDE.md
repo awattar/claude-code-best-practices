@@ -40,6 +40,10 @@ ls .claude/commands/
 claude-code-best-practices/
 ├── LICENSE                      # MIT License
 ├── README.md                    # Main documentation with best practices
+├── .gitmessage                  # Git commit message template
+├── .github/                     # GitHub templates and workflows
+│   ├── pull_request_template.md # Standardized PR template
+│   └── COMMIT_CONVENTION.md     # Commit best practices guide
 └── .claude/                     # Claude Code configuration
     └── commands/                # Custom slash commands
         ├── commit.md            # Conventional commit helper
@@ -56,6 +60,8 @@ The project follows a documentation-first approach with integrated tooling:
 
 - **`README.md`**: Primary content with comprehensive Claude Code guidance.
 - **`LICENSE`**: MIT license for open-source usage.
+- **`.gitmessage`**: Git commit message template with conventional format.
+- **`.github/`**: GitHub templates and workflow configurations.
 - **`.claude/commands/`**: Custom workflow commands for Claude Code users.
 
 ## Technology Stack
@@ -103,6 +109,14 @@ The project follows a documentation-first approach with integrated tooling:
 
 For detailed information about each command, including usage examples, features, and best practices, use `/help-commands` - `@.claude/commands/`.
 
+#### Template Integration
+
+Commands now reference standardized templates:
+
+- **Commit messages**: `@.gitmessage` - Three format variants (single-line, multiline, parent/child)
+- **Pull requests**: `@.github/pull_request_template.md` - Structured PR format
+- **Commit conventions**: `@.github/COMMIT_CONVENTION.md` - Best practices guide
+
 ### 3. Curated Resource Links
 
 - **Location**: `README.md:38-76`
@@ -125,6 +139,16 @@ gh auth login
 
 # Verify access
 gh repo view
+```
+
+### Git Template Configuration
+
+```bash
+# Set commit message template
+git config commit.template .gitmessage
+
+# Verify template is set
+git config commit.template
 ```
 
 ### Browser Automation
@@ -171,10 +195,18 @@ Educational resource and practical tooling for Claude Code adoption in developme
 ### When working with this repository:
 
 1. **Content Focus**: Documentation + custom Claude Code commands.
-2. **Primary Files**: `README.md` and `.`claude/commands/*.md`.
-3. **Command Usage**: Test commands in appropriate project contexts.
-4. **Update Patterns**: Maintain consistency between documentation and commands.
-5. **Version Control**: Track both content and command changes.
+2. **Primary Files**: `README.md` and `.claude/commands/*.md`.
+3. **Template Files**: Reference `.gitmessage` and `.github/` templates using `@` prefix.
+4. **Command Usage**: Test commands in appropriate project contexts.
+5. **Update Patterns**: Maintain consistency between documentation, commands, and templates.
+6. **Version Control**: Track both content and command changes.
+
+### Template System:
+
+- **Commit Messages**: Use `@.gitmessage` template with three format variants
+- **Pull Requests**: Follow `@.github/pull_request_template.md` structure
+- **Conventions**: Reference `@.github/COMMIT_CONVENTION.md` for best practices
+- **Post-Review**: Use specific format for post-review commit fixes
 
 ### Common Tasks:
 
@@ -190,3 +222,13 @@ Educational resource and practical tooling for Claude Code adoption in developme
 - **Structure**: Include usage, purpose, and step-by-step workflows.
 - **Integration**: Ensure commands work with GitHub CLI and project tools.
 - **Testing**: Validate commands in real project environments.
+- **Template References**: Use `@` prefix to reference template files for Claude Code context.
+
+#### Recent Template Restructuring
+
+The project recently underwent template restructuring:
+
+- **Moved specifications**: Detailed format specs moved from command files to GitHub templates
+- **Template references**: Commands now use `@` prefix (e.g., `@.gitmessage`, `@.github/pull_request_template.md`)
+- **Post-review format**: Added specific format for post-review commit fixes
+- **Centralized conventions**: Commit best practices consolidated in `@.github/COMMIT_CONVENTION.md`
