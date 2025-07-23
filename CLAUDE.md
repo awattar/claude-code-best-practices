@@ -96,7 +96,7 @@ The project follows a documentation-first approach with integrated tooling:
 
 - **Location**: `.claude/commands/`
 - **Purpose**: Streamline common development workflows.
-- **Help**: Use `/help-commands` - `@.claude/commands/help-commands.md` for detailed usage information.
+- **Help**: Use `/help-commands` - @.claude/commands/help-commands.md for detailed usage information.
 
 #### Available Commands
 
@@ -107,15 +107,15 @@ The project follows a documentation-first approach with integrated tooling:
 - `/reviewpr` - Pull Request Review.
 - `/test` - Test Suite Management.
 
-For detailed information about each command, including usage examples, features, and best practices, use `/help-commands` - `@.claude/commands/`.
+For detailed information about each command, including usage examples, features, and best practices, use `/help-commands` - @.claude/commands/.
 
 #### Template Integration
 
 Commands now reference standardized templates:
 
-- **Commit messages**: `@.gitmessage` - Three format variants (single-line, multiline, parent/child)
-- **Pull requests**: `@.github/pull_request_template.md` - Structured PR format
-- **Commit conventions**: `@.github/COMMIT_CONVENTION.md` - Best practices guide
+- **Commit messages**: @.gitmessage - Four format variants (single-line, multiline, parent/child, post-review).
+- **Pull requests**: @.github/pull_request_template.md - Structured PR format.
+- **Commit conventions**: @.github/COMMIT_CONVENTION.md - Best practices guide.
 
 ### 3. Curated Resource Links
 
@@ -201,13 +201,6 @@ Educational resource and practical tooling for Claude Code adoption in developme
 5. **Update Patterns**: Maintain consistency between documentation, commands, and templates.
 6. **Version Control**: Track both content and command changes.
 
-### Template System:
-
-- **Commit Messages**: Use `@.gitmessage` template with three format variants
-- **Pull Requests**: Follow `@.github/pull_request_template.md` structure
-- **Conventions**: Reference `@.github/COMMIT_CONVENTION.md` for best practices
-- **Post-Review**: Use specific format for post-review commit fixes
-
 ### Common Tasks:
 
 - Updating best practices based on new Claude Code features.
@@ -228,7 +221,7 @@ Educational resource and practical tooling for Claude Code adoption in developme
 
 The project recently underwent template restructuring:
 
-- **Moved specifications**: Detailed format specs moved from command files to GitHub templates
-- **Template references**: Commands now use `@` prefix (e.g., `@.gitmessage`, `@.github/pull_request_template.md`)
-- **Post-review format**: Added specific format for post-review commit fixes
-- **Centralized conventions**: Commit best practices consolidated in `@.github/COMMIT_CONVENTION.md`
+- **Moved specifications**: Detailed format specs moved from command files to GitHub templates.
+- **Template references**: Commands now use `@` prefix (e.g., `@.gitmessage`, `@.github/pull_request_template.md`).
+- **Post-review format**: Added specific format for post-review commit fixes.
+- **Centralized conventions**: Commit best practices consolidated in `@.github/COMMIT_CONVENTION.md`.

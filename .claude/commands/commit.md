@@ -22,8 +22,8 @@ To create a commit, just type:
 The `/commit` command follows standardized commit conventions and best practices. For detailed formatting rules and guidelines, refer to:
 
 ### Commit Format Templates
-- **Format reference**: `@.gitmessage` - Complete commit message format specification with examples
-- **Best practices**: `@.github/COMMIT_CONVENTION.md` - Detailed guidelines for atomic commits, splitting commits, and workflow integration
+- **Format reference**: @.gitmessage - Complete commit message format specification with examples
+- **Best practices**: @.github/COMMIT_CONVENTION.md - Detailed guidelines for atomic commits, splitting commits, and workflow integration
 
 ### Key Conventions
 - **Conventional commit format**: Follows standardized format with issue linking

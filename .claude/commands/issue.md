@@ -103,12 +103,12 @@ Verify your changes work correctly:
 When creating pull requests, follow these guidelines:
 
 - **PR Title**: Use the first (most significant) commit message from the branch as the PR title.
-- **PR Description**: GitHub will automatically populate the PR description using the template from `@.github/pull_request_template.md`
-- **Format**: Follow the template structure exactly as specified in the GitHub PR template
-- **Requirements**: Review the requirements listed at the bottom of the PR template before submitting
+- **PR Description**: GitHub will automatically populate the PR description using the template specified in [GitHub PR Template](#GitHub-PR-Template)
+- **Format**: Follow the template structure exactly as specified in the [GitHub PR Template](#GitHub-PR-Template)
+- **Requirements**: Review the requirements listed at the bottom of the [GitHub PR Template](#GitHub-PR-Template) before submitting
 
 ### GitHub PR Template
-The repository includes a standardized PR template at `@.github/pull_request_template.md` that provides:
+The repository includes a standardized PR template at @.github/pull_request_template.md that provides:
 - Structured format for Summary, Test plan, Key Changes, and Verification sections
 - Clear requirements and formatting guidelines
 - Consistent format across all pull requests
