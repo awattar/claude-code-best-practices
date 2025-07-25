@@ -102,3 +102,7 @@ _"Learn about common workflows with Claude Code. Each task in this document incl
 
 - [`Awesome Claude Code`](https://github.com/hesreallyhim/awesome-claude-code) by [hesreallyhim](https://github.com/hesreallyhim)  
   _"This is a curated list of slash-commands, CLAUDE.md files, CLI tools, and other resources and guides for enhancing your Claude Code workflow, productivity, and vibes."_
+- [`SuperClaude Framework`](https://github.com/SuperClaude-Org/SuperClaude_Framework) by [SuperClaude-Org](https://github.com/SuperClaude-Org)  
+  _"A framework that extends Claude Code with specialized commands, personas, and MCP server integration."_
+- [`Agent OS`](https://github.com/buildermethods/agent-os) by [buildermethods](https://github.com/buildermethods)  
+  _"Agent OS transforms AI coding agents from confused interns into productive developers."_
