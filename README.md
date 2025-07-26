@@ -77,8 +77,10 @@ _"Learn about common workflows with Claude Code. Each task in this document incl
   _"Learn how to manage Claude Code’s memory across sessions with different memory locations and best practices. Claude Code can remember your preferences across sessions, like style guidelines and common commands in your workflow."_
 - [`Hooks`](https://docs.anthropic.com/en/docs/claude-code/hooks)  
   _"Customize and extend Claude Code’s behavior by registering shell commands."_
+- [`Sub-agents`](https://docs.anthropic.com/en/docs/claude-code/sub-agents)  
+  _"Create and use specialized AI sub agents in Claude Code for task-specific workflows and improved context management."_
 - [`GitHub Actions`](https://docs.anthropic.com/en/docs/claude-code/github-actions)  
-  _"Learn about integrating Claude Code into your development workflow with Claude Code GitHub Actions. Claude Code GitHub Actions brings AI-powered automation to your GitHub workflow. With a simple @claude mention in any PR or issue, Claude can analyze your code, create pull requests, implement features, and fix bugs - all while following your project’s standards."_
+  _"Learn about integrating Claude Code into your development workflow with Claude Code GitHub Actions. Claude Code GitHub Actions brings AI-powered automation to your GitHub workflow. With a simple @claude mention in any PR or issue, Claude can analyze your code, create pull requests, implement features, and fix bugs - all while following your project's standards."_
 
 ### 🔖 Other Documentation
 
