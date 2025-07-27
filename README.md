@@ -70,15 +70,17 @@ This repository includes a collection of custom slash commands designed to strea
 - [`Best Practices for Agentic Coding`](https://www.anthropic.com/engineering/claude-code-best-practices)  
   _"Claude Code is a command line tool for agentic coding. This post covers tips and tricks that have proven effective for using Claude Code across various codebases, languages, and environments."_
 - [`Common Workflows`](https://docs.anthropic.com/en/docs/claude-code/common-workflows)  
-_"Learn about common workflows with Claude Code. Each task in this document includes clear instructions, example commands, and best practices to help you get the most from Claude Code."_
-  - [`Run Parallel Claude Code Sessions with Git Worktrees`](https://docs.anthropic.com/en/docs/claude-code/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees)  
-    _"Suppose you need to work on multiple tasks simultaneously with complete code isolation between Claude Code instances."_
+  _"Learn about common workflows with Claude Code. Each task in this document includes clear instructions, example commands, and best practices to help you get the most from Claude Code."_
+    - [`Run Parallel Claude Code Sessions with Git Worktrees`](https://docs.anthropic.com/en/docs/claude-code/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees)  
+      _"Suppose you need to work on multiple tasks simultaneously with complete code isolation between Claude Code instances."_
 - [`Manage Claude's Memory`](https://docs.anthropic.com/en/docs/claude-code/memory)  
   _"Learn how to manage Claude Code’s memory across sessions with different memory locations and best practices. Claude Code can remember your preferences across sessions, like style guidelines and common commands in your workflow."_
 - [`Hooks`](https://docs.anthropic.com/en/docs/claude-code/hooks)  
   _"Customize and extend Claude Code’s behavior by registering shell commands."_
 - [`Sub-agents`](https://docs.anthropic.com/en/docs/claude-code/sub-agents)  
   _"Create and use specialized AI sub agents in Claude Code for task-specific workflows and improved context management."_
+    - [`Claude Code Subagents Collection`](https://github.com/davepoon/claude-code-subagents-collection) by [davepoon](https://github.com/davepoon)  
+      _"A comprehensive collection of specialized AI subagents for Claude Code, designed to enhance development workflows with domain-specific expertise."_
 - [`GitHub Actions`](https://docs.anthropic.com/en/docs/claude-code/github-actions)  
   _"Learn about integrating Claude Code into your development workflow with Claude Code GitHub Actions. Claude Code GitHub Actions brings AI-powered automation to your GitHub workflow. With a simple @claude mention in any PR or issue, Claude can analyze your code, create pull requests, implement features, and fix bugs - all while following your project's standards."_
 
