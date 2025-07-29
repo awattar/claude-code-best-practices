@@ -18,6 +18,17 @@ To review a pull request, just type:
 4. Documents findings in a scratchpad and submits review via GitHub CLI (`gh`).
 5. Monitors for author responses and re-reviews as needed.
 
+## Agents Used
+
+This command leverages specialized agents for comprehensive pull request review:
+
+- **general-code-quality-debugger** - Essential for systematic code review and quality assessment
+- **general-technical-project-lead** - For security assessments and architectural review
+- **general-qa** - For testing validation and edge case identification
+- **general-solution-architect** - For reviewing architectural decisions and patterns
+
+Each agent contributes specialized expertise to ensure thorough project analysis and high-quality documentation generation.
+
 Follow these steps:
 
 ## General

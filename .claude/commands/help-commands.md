@@ -119,3 +119,29 @@ To get help with available commands, just type:
 - Identify and document project-specific testing tools.
 - Set up browser automation for UI testing.
 - Configure project-specific conventions in documentation.
+
+## Agents Used Across Commands
+
+The following specialized agents are leveraged across all commands to provide expert capabilities:
+
+### Core Agents
+- **general-purpose** - Complex multi-step analysis, file searching, and coordination
+- **general-solution-architect** - Architecture analysis, technology stack decisions, and design patterns
+- **general-technical-writer** - Documentation creation, formatting, and content organization
+
+### Development Agents
+- **general-fullstack-developer** - End-to-end feature implementation spanning multiple layers
+- **general-backend-developer** - API development, database patterns, and server-side logic
+- **general-frontend-developer** - UI/UX implementation, component patterns, and browser automation
+
+### Quality Assurance Agents
+- **general-qa** - Testing strategies, automation, and comprehensive validation
+- **general-code-quality-debugger** - Code review, debugging, and quality assessment
+- **general-technical-project-lead** - Security assessments, strategic decisions, and architectural review
+
+### Agent Usage by Command
+- **`/custom-init`**: general-solution-architect, general-technical-writer, general-purpose
+- **`/commit`**: general-code-quality-debugger, general-technical-project-lead
+- **`/issue`**: general-fullstack-developer, general-backend-developer, general-frontend-developer, general-qa, general-purpose
+- **`/reviewpr`**: general-code-quality-debugger, general-technical-project-lead, general-qa, general-solution-architect
+- **`/test`**: general-qa, general-code-quality-debugger, general-backend-developer, general-frontend-developer

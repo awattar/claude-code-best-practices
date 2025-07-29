@@ -45,13 +45,23 @@ claude-code-best-practices/
 │   ├── pull_request_template.md # Standardized PR template
 │   └── COMMIT_CONVENTION.md     # Commit best practices guide
 └── .claude/                     # Claude Code configuration
-    └── commands/                # Custom slash commands
-        ├── commit.md            # Conventional commit helper
-        ├── custom-init.md       # CLAUDE.md generation command
-        ├── help-commands.md     # Command help and usage guide
-        ├── issue.md             # GitHub issue workflow
-        ├── reviewpr.md          # Pull request review tool
-        └── test.md              # Test suite management
+    ├── commands/                # Custom slash commands
+    │   ├── commit.md            # Conventional commit helper
+    │   ├── custom-init.md       # CLAUDE.md generation command
+    │   ├── help-commands.md     # Command help and usage guide
+    │   ├── issue.md             # GitHub issue workflow
+    │   ├── reviewpr.md          # Pull request review tool
+    │   └── test.md              # Test suite management
+    └── agents/                  # Specialized AI agents
+        ├── general-backend-developer.md
+        ├── general-code-quality-debugger.md
+        ├── general-devops.md
+        ├── general-frontend-developer.md
+        ├── general-fullstack-developer.md
+        ├── general-qa.md
+        ├── general-solution-architect.md
+        ├── general-technical-project-lead.md
+        └── general-technical-writer.md
 ```
 
 ### Content Organization
@@ -63,6 +73,7 @@ The project follows a documentation-first approach with integrated tooling:
 - **`.gitmessage`**: Git commit message template with conventional format.
 - **`.github/`**: GitHub templates and workflow configurations.
 - **`.claude/commands/`**: Custom workflow commands for Claude Code users.
+- **`.claude/agents/`**: Specialized AI agents that enhance command capabilities.
 
 ## Technology Stack
 
@@ -70,7 +81,7 @@ The project follows a documentation-first approach with integrated tooling:
 
 - **Documentation**: Markdown.
 - **Version Control**: Git.
-- **Claude Code**: Custom commands and workflows.
+- **Claude Code**: Custom commands, workflows, and specialized AI agents.
 
 ### Dependencies
 
@@ -116,6 +127,32 @@ Commands now reference standardized templates:
 - **Commit messages**: @.gitmessage - Four format variants (single-line, multiline, parent/child, post-review).
 - **Pull requests**: @.github/pull_request_template.md - Structured PR format.
 - **Commit conventions**: @.github/COMMIT_CONVENTION.md - Best practices guide.
+
+#### Agent Integration
+
+Commands leverage specialized AI agents to provide expert-level capabilities across different domains:
+
+**Core Agents:**
+- **general-purpose** - Complex multi-step analysis, file searching, and task coordination
+- **general-solution-architect** - Architecture analysis, technology stack decisions, and design patterns
+- **general-technical-writer** - Documentation creation, formatting, and content organization
+
+**Development Agents:**
+- **general-fullstack-developer** - End-to-end feature implementation spanning multiple layers
+- **general-backend-developer** - API development, database patterns, and server-side logic
+- **general-frontend-developer** - UI/UX implementation, component patterns, and browser automation
+
+**Quality Assurance Agents:**
+- **general-qa** - Testing strategies, automation, and comprehensive validation
+- **general-code-quality-debugger** - Code review, debugging, and quality assessment
+- **general-technical-project-lead** - Security assessments, strategic decisions, and architectural review
+
+**Agent Usage by Command:**
+- **`/custom-init`**: solution-architect, technical-writer, general-purpose
+- **`/commit`**: code-quality-debugger, technical-project-lead
+- **`/issue`**: fullstack-developer, backend-developer, frontend-developer, qa, general-purpose
+- **`/reviewpr`**: code-quality-debugger, technical-project-lead, qa, solution-architect
+- **`/test`**: qa, code-quality-debugger, backend-developer, frontend-developer
 
 ### 3. Curated Resource Links
 
@@ -194,28 +231,30 @@ Educational resource and practical tooling for Claude Code adoption in developme
 
 ### When working with this repository:
 
-1. **Content Focus**: Documentation + custom Claude Code commands.
-2. **Primary Files**: `README.md` and `.claude/commands/*.md`.
+1. **Content Focus**: Documentation + custom Claude Code commands + specialized AI agents.
+2. **Primary Files**: `README.md`, `.claude/commands/*.md`, and `.claude/agents/*.md`.
 3. **Template Files**: Reference `.gitmessage` and `.github/` templates using `@` prefix.
 4. **Command Usage**: Test commands in appropriate project contexts.
-5. **Update Patterns**: Maintain consistency between documentation, commands, and templates.
-6. **Version Control**: Track both content and command changes.
+5. **Agent Integration**: Leverage specialized agents for domain-specific expertise.
+6. **Update Patterns**: Maintain consistency between documentation, commands, templates, and agents.
+7. **Version Control**: Track content, command, and agent changes.
 
 ### Common Tasks:
 
 - Updating best practices based on new Claude Code features.
-- Improving custom command workflows.
-- Adding new command templates.
+- Improving custom command workflows and agent integration.
+- Adding new command templates and agent definitions.
 - Testing command effectiveness across different project types.
-- Maintaining consistency between documentation and commands.
+- Maintaining consistency between documentation, commands, and agents.
 
 ### Command Development:
 
 - **Format**: Use markdown with clear usage sections.
 - **Structure**: Include usage, purpose, and step-by-step workflows.
-- **Integration**: Ensure commands work with GitHub CLI and project tools.
+- **Integration**: Ensure commands work with GitHub CLI, project tools, and specialized agents.
 - **Testing**: Validate commands in real project environments.
 - **Template References**: Use `@` prefix to reference template files for Claude Code context.
+- **Agent Coordination**: Leverage appropriate specialized agents for domain expertise.
 
 #### Recent Template Restructuring
 

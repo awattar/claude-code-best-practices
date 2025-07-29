@@ -63,6 +63,46 @@ This repository includes a collection of custom slash commands designed to strea
   Comprehensive test execution and improvement with framework detection, targeted test runs, coverage analysis, and automated fixes.
 
 
+## 🤖 Specialized AI Agents
+
+This repository includes a collection of 9 specialized AI agents that provide domain-specific expertise across all development workflows. These agents work automatically with commands to deliver expert-level capabilities in architecture, development, and quality assurance.
+
+### 🏗️ Core Infrastructure Agents
+
+- [`general-purpose`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-purpose.md)  
+  Complex multi-step analysis, file searching, and task coordination across any development workflow.
+
+- [`general-solution-architect`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-solution-architect.md)  
+  Architecture analysis, technology stack decisions, scalability planning, and distributed systems design.
+
+- [`general-technical-writer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-technical-writer.md)  
+  Documentation creation, API documentation, formatting, and technical content organization.
+
+### 💻 Development Specialists
+
+- [`general-fullstack-developer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-fullstack-developer.md)  
+  End-to-end feature implementation spanning database, API, and frontend layers with seamless integration.
+
+- [`general-backend-developer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-backend-developer.md)  
+  API development, database design, server-side logic, and backend performance optimization.
+
+- [`general-frontend-developer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-frontend-developer.md)  
+  UI/UX implementation, component patterns, browser automation, and modern JavaScript frameworks.
+
+### 🛡️ Quality Assurance & Leadership
+
+- [`general-qa`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-qa.md)  
+  Testing strategies, test automation, comprehensive validation, and quality assurance methodologies.
+
+- [`general-code-quality-debugger`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-code-quality-debugger.md)  
+  Code review, systematic debugging, refactoring guidance, and technical debt reduction.
+
+- [`general-technical-project-lead`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-technical-project-lead.md)  
+  Security assessments, strategic technical decisions, performance optimization, and architectural leadership.
+
+**Agent Integration:** These specialized agents work seamlessly with all custom commands, automatically providing domain expertise when needed. Commands like `/issue`, `/reviewpr`, and `/test` leverage multiple agents to deliver comprehensive, expert-level results.
+
+
 ## 📚 Claude Code Documentation
 
 - [`Models Overview`](https://docs.anthropic.com/en/docs/about-claude/models/overview)  
@@ -101,6 +141,8 @@ This repository includes a collection of custom slash commands designed to strea
   _"This video shows you how to use Git Worktrees and my method for automating the workflow for spinning up new worktrees to run multiple Claude Code agents simultaneously."_
 - [`Claude Code Hooks is AMAZING: "Text Message Me When AI Agent is Done"`](https://www.youtube.com/watch?v=bvwn3h2XUp4) by [AllAboutAI-YT](https://github.com/AllAboutAI-YT)  
   _A hands-on demo showing how to use Claude Code hooks to send a text message when your AI coding agent finishes a task—automating notifications with shell commands._
+- [`My Claude Code Sub Agents BUILD THEMSELVES`](https://www.youtube.com/watch?v=7B2HJr0Y68g) by [disler](https://github.com/disler)  
+  _"Are you using Claude Code Sub Agents the WRONG way? I have a BIG IDEA for you. Sub Agents just changed EVERYTHING about AI coding. With the right approach, your agents can now BUILD THEMSELVES."_
 
 ## 🔗 Related:
 

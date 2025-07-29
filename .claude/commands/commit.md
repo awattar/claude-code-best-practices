@@ -17,9 +17,18 @@ To create a commit, just type:
 4. Analyzes the diff to determine if multiple related logical changes are present.
 5. If multiple related changes are detected, breaks the commit message into multiline message.
 
+## Agents Used
+
+This command leverages two specialized agents for optimal results:
+
+- **general-code-quality-debugger** - For analyzing code changes and ensuring commit quality
+- **general-technical-project-lead** - For strategic decisions about commit structure and breaking changes
+
+Each agent contributes expertise to ensure high-quality commits that follow best practices and maintain project standards.
+
 ## Best Practices for Commits
 
-The `/commit` command follows standardized commit conventions and best practices. For detailed formatting rules and guidelines, refer to:
+IMPORTANT: The `/commit` command always follows standardized commit conventions and best practices. For detailed formatting rules and guidelines, refer to:
 
 ### Commit Format Templates
 - **Format reference**: @.gitmessage - Complete commit message format specification with examples

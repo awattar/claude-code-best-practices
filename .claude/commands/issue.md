@@ -18,6 +18,18 @@ To analyze and fix the GitHub issue, just type:
 4. Creates a feature branch and implements the solution with incremental commits.
 5. Tests the changes and opens a PR for review.
 
+## Agents Used
+
+This command leverages specialized agents based on issue type and complexity:
+
+- **general-fullstack-developer** - For end-to-end feature implementation spanning multiple layers
+- **general-backend-developer** - For API-focused issues and backend development
+- **general-frontend-developer** - For UI/UX issues and frontend implementation
+- **general-qa** - For comprehensive testing strategies and validation
+- **general-purpose** - For complex issue analysis and multi-step research
+
+The appropriate agent is selected based on the issue requirements and project architecture. Each agent contributes specialized expertise to ensure thorough project analysis and high-quality documentation generation.
+
 Follow these steps:
 
 ## General
@@ -100,7 +112,7 @@ Verify your changes work correctly:
 
 ## Best Practices for PRs
 
-When creating pull requests, follow these guidelines:
+IMPORTANT: When creating pull requests, always follow these guidelines:
 
 - **PR Title**: Use the first (most significant) commit message from the branch as the PR title.
 - **PR Description**: GitHub will automatically populate the PR description using the template specified in [GitHub PR Template](#GitHub-PR-Template)

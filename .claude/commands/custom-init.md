@@ -16,6 +16,16 @@ To initialize a new CLAUDE.md file with codebase documentation, just type:
 2. It automatically detects the project's architecture, technology stack, key features, and development patterns, then documents them in a structured format.
 3. The generated file helps Claude understand the project context, locate important files, run correct commands, and follow established patterns when assisting with development tasks.
 
+## Agents Used
+
+This command leverages three specialized agents for optimal results:
+
+- **general-solution-architect** - For analyzing project architecture patterns and technology stack decisions
+- **general-technical-writer** - For creating comprehensive, well-structured documentation
+- **general-purpose** - For complex multi-step analysis and file searching across large codebases
+
+Each agent contributes specialized expertise to ensure thorough project analysis and high-quality documentation generation.
+
 Follow these steps:
 
 ## Phase 0: Initialization
