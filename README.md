@@ -151,4 +151,6 @@ This repository includes a collection of 9 specialized AI agents that provide do
 - [`SuperClaude Framework`](https://github.com/SuperClaude-Org/SuperClaude_Framework) by [SuperClaude-Org](https://github.com/SuperClaude-Org)  
   _"A framework that extends Claude Code with specialized commands, personas, and MCP server integration."_
 - [`Agent OS`](https://github.com/buildermethods/agent-os) by [buildermethods](https://github.com/buildermethods)  
+- [`claude-dash`](https://github.com/krabat-l/claude-dash) by [krabat-l](https://github.com/krabat-l)  
+  _"Real-time statusline for Claude Code showing context, cost, quota, cache, tools, and git status. Zero dependencies."_
   _"Agent OS transforms AI coding agents from confused interns into productive developers."_
