@@ -65,18 +65,20 @@ This repository includes a collection of custom slash commands designed to strea
 
 ## 🤖 Specialized AI Agents
 
-This repository includes a collection of 9 specialized AI agents that provide domain-specific expertise across all development workflows. These agents work automatically with commands to deliver expert-level capabilities in architecture, development, and quality assurance.
+This repository includes a collection of 10 specialized AI agents that provide domain-specific expertise across all development workflows. These agents work automatically with commands to deliver expert-level capabilities in architecture, development, and quality assurance.
+
+> **Note:** Commands also leverage Claude Code's built-in [`general-purpose`](https://docs.anthropic.com/en/docs/claude-code/sub-agents) agent for complex multi-step analysis and file searching. It ships with Claude Code, so it is not defined in this repository.
 
 ### 🏗️ Core Infrastructure Agents
-
-- [`general-purpose`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-purpose.md)  
-  Complex multi-step analysis, file searching, and task coordination across any development workflow.
 
 - [`general-solution-architect`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-solution-architect.md)  
   Architecture analysis, technology stack decisions, scalability planning, and distributed systems design.
 
 - [`general-technical-writer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-technical-writer.md)  
   Documentation creation, API documentation, formatting, and technical content organization.
+
+- [`general-pm`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-pm.md)  
+  Product management oversight — issue creation, prioritization, progress tracking, and lifecycle management.
 
 ### 💻 Development Specialists
 
@@ -88,6 +90,9 @@ This repository includes a collection of 9 specialized AI agents that provide do
 
 - [`general-frontend-developer`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-frontend-developer.md)  
   UI/UX implementation, component patterns, browser automation, and modern JavaScript frameworks.
+
+- [`general-devops`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/agents/general-devops.md)  
+  Infrastructure automation, CI/CD pipeline design, container orchestration, and reliability engineering.
 
 ### 🛡️ Quality Assurance & Leadership
 
@@ -101,6 +106,45 @@ This repository includes a collection of 9 specialized AI agents that provide do
   Security assessments, strategic technical decisions, performance optimization, and architectural leadership.
 
 **Agent Integration:** These specialized agents work seamlessly with all custom commands, automatically providing domain expertise when needed. Commands like `/issue`, `/reviewpr`, and `/test` leverage multiple agents to deliver comprehensive, expert-level results.
+
+
+## 🧩 Skills
+
+Skills are model-invoked capabilities: instead of being triggered by a slash command, Claude Code loads them **automatically** when the task matches the skill's `description`. Each skill lives in `.claude/skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`) and instructions in the body.
+
+This repository includes one example:
+
+- [`conventional-commits`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/skills/conventional-commits/SKILL.md)  
+  Automatically enforces the project's commit format whenever a commit message is being authored — no command needed.
+
+**Skills vs. commands vs. agents:**
+
+| Mechanism | Trigger | Best for |
+|-----------|---------|----------|
+| **Slash command** | User types `/name` | Explicit, on-demand workflows |
+| **Skill** | Claude matches the `description` | Conventions and know-how that should apply automatically |
+| **Subagent** | Delegated by Claude or a command | Heavy, focused work that should run in its own context window so it doesn't crowd the main session |
+
+See the [Skills documentation](https://docs.anthropic.com/en/docs/claude-code/skills) for authoring details, including bundling scripts and reference files alongside `SKILL.md`.
+
+
+## ⚙️ Project Configuration
+
+The repository ships a checked-in [`.claude/settings.json`](https://github.com/awattar/claude-code-best-practices/blob/main/.claude/settings.json) that demonstrates two of the most useful project-level configuration mechanisms:
+
+### Permissions
+
+Scoped `allow` / `ask` / `deny` rules let Claude Code run safe, routine commands (`git status`, `gh pr view`, etc.) without prompting, require confirmation for riskier ones (`git push`), and block reads of sensitive files (`.env`, `secrets/`). Tune these to your team's risk tolerance — settings are merged from user, project, and local scopes.
+
+### Hooks
+
+Hooks register shell commands that run automatically on lifecycle events (`PreToolUse`, `PostToolUse`, `Stop`, etc.). The bundled example uses a `Stop` hook to print `git status --short` at the end of every turn so you always see what changed. Other common patterns:
+
+- **`PostToolUse`** matching `Edit|Write` — auto-format or lint files after Claude edits them.
+- **`PreToolUse`** matching `Bash` — block dangerous commands before they execute.
+- **`Stop`** — send a desktop/Slack notification when Claude finishes a long task.
+
+See the [Hooks documentation](https://docs.anthropic.com/en/docs/claude-code/hooks) for the full event list and JSON schema.
 
 
 ## 📚 Claude Code Documentation
@@ -128,8 +172,8 @@ This repository includes a collection of 9 specialized AI agents that provide do
 
 - [`My Claude Code Workflow and Personal Tips`](https://thegroundtruth.substack.com/p/my-claude-code-workflow-and-personal-tips) by [paradite](https://github.com/paradite)  
   _"How I use roadmap + task files to manage Claude Code, and my personal tips for effective Claude Code usage."_
-- [`Puppeteer Local MCP Server`](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer)
-  _"A Model Context Protocol server that provides browser automation capabilities using Puppeteer. This server enables LLMs to interact with web pages, take screenshots, and execute JavaScript in a real browser environment."_
+- [`Playwright MCP Server`](https://github.com/microsoft/playwright-mcp)
+  _"A Model Context Protocol server that provides browser automation capabilities using Playwright. It lets Claude interact with web pages, fill forms, take screenshots, and run end-to-end checks against a real browser. The older Puppeteer MCP server is archived — Playwright MCP is the maintained replacement."_
 
 ## 💡 Inspired by:
 

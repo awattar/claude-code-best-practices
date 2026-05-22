@@ -45,6 +45,7 @@ claude-code-best-practices/
 │   ├── pull_request_template.md # Standardized PR template
 │   └── COMMIT_CONVENTION.md     # Commit best practices guide
 └── .claude/                     # Claude Code configuration
+    ├── settings.json            # Permissions + hooks (project scope)
     ├── commands/                # Custom slash commands
     │   ├── commit.md            # Conventional commit helper
     │   ├── custom-init.md       # CLAUDE.md generation command
@@ -52,16 +53,20 @@ claude-code-best-practices/
     │   ├── issue.md             # GitHub issue workflow
     │   ├── reviewpr.md          # Pull request review tool
     │   └── test.md              # Test suite management
-    └── agents/                  # Specialized AI agents
-        ├── general-backend-developer.md
-        ├── general-code-quality-debugger.md
-        ├── general-devops.md
-        ├── general-frontend-developer.md
-        ├── general-fullstack-developer.md
-        ├── general-qa.md
-        ├── general-solution-architect.md
-        ├── general-technical-project-lead.md
-        └── general-technical-writer.md
+    ├── agents/                  # Specialized AI agents
+    │   ├── general-backend-developer.md
+    │   ├── general-code-quality-debugger.md
+    │   ├── general-devops.md
+    │   ├── general-frontend-developer.md
+    │   ├── general-fullstack-developer.md
+    │   ├── general-pm.md
+    │   ├── general-qa.md
+    │   ├── general-solution-architect.md
+    │   ├── general-technical-project-lead.md
+    │   └── general-technical-writer.md
+    └── skills/                  # Model-invoked skills
+        └── conventional-commits/
+            └── SKILL.md         # Auto-enforces commit convention
 ```
 
 ### Content Organization
@@ -72,8 +77,10 @@ The project follows a documentation-first approach with integrated tooling:
 - **`LICENSE`**: MIT license for open-source usage.
 - **`.gitmessage`**: Git commit message template with conventional format.
 - **`.github/`**: GitHub templates and workflow configurations.
+- **`.claude/settings.json`**: Project-scoped permissions and hooks.
 - **`.claude/commands/`**: Custom workflow commands for Claude Code users.
 - **`.claude/agents/`**: Specialized AI agents that enhance command capabilities.
+- **`.claude/skills/`**: Model-invoked skills that apply conventions automatically.
 
 ## Technology Stack
 
@@ -130,17 +137,18 @@ Commands now reference standardized templates:
 
 #### Agent Integration
 
-Commands leverage specialized AI agents to provide expert-level capabilities across different domains:
+Commands leverage specialized AI agents to provide expert-level capabilities across different domains. The repository defines 10 custom agents in `.claude/agents/`; commands also use Claude Code's built-in **general-purpose** agent (not defined in this repo) for complex multi-step analysis and file searching.
 
 **Core Agents:**
-- **general-purpose** - Complex multi-step analysis, file searching, and task coordination
 - **general-solution-architect** - Architecture analysis, technology stack decisions, and design patterns
 - **general-technical-writer** - Documentation creation, formatting, and content organization
+- **general-pm** - Issue creation, prioritization, progress tracking, and lifecycle management
 
 **Development Agents:**
 - **general-fullstack-developer** - End-to-end feature implementation spanning multiple layers
 - **general-backend-developer** - API development, database patterns, and server-side logic
 - **general-frontend-developer** - UI/UX implementation, component patterns, and browser automation
+- **general-devops** - Infrastructure automation, CI/CD, container orchestration, and reliability engineering
 
 **Quality Assurance Agents:**
 - **general-qa** - Testing strategies, automation, and comprehensive validation
@@ -148,7 +156,7 @@ Commands leverage specialized AI agents to provide expert-level capabilities acr
 - **general-technical-project-lead** - Security assessments, strategic decisions, and architectural review
 
 **Agent Usage by Command:**
-- **`/custom-init`**: solution-architect, technical-writer, general-purpose
+- **`/custom-init`**: solution-architect, backend-developer, devops, qa, code-quality-debugger, technical-writer (general-purpose as fallback)
 - **`/commit`**: code-quality-debugger, technical-project-lead
 - **`/issue`**: fullstack-developer, backend-developer, frontend-developer, qa, general-purpose
 - **`/reviewpr`**: code-quality-debugger, technical-project-lead, qa, solution-architect
@@ -231,8 +239,8 @@ Educational resource and practical tooling for Claude Code adoption in developme
 
 ### When working with this repository:
 
-1. **Content Focus**: Documentation + custom Claude Code commands + specialized AI agents.
-2. **Primary Files**: `README.md`, `.claude/commands/*.md`, and `.claude/agents/*.md`.
+1. **Content Focus**: Documentation + custom Claude Code commands + specialized AI agents + skills + project configuration.
+2. **Primary Files**: `README.md`, `.claude/commands/*.md`, `.claude/agents/*.md`, `.claude/skills/**/SKILL.md`, and `.claude/settings.json`.
 3. **Template Files**: Reference `.gitmessage` and `.github/` templates using `@` prefix.
 4. **Command Usage**: Test commands in appropriate project contexts.
 5. **Agent Integration**: Leverage specialized agents for domain-specific expertise.

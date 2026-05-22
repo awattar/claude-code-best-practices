@@ -1,3 +1,7 @@
+---
+description: Show all available custom commands and how to use them
+---
+
 # Claude Code User Command: Help Commands
 
 This command provides comprehensive help for all available custom commands in this Claude Code Best Practices repository.
@@ -124,15 +128,18 @@ To get help with available commands, just type:
 
 The following specialized agents are leveraged across all commands to provide expert capabilities:
 
+> Commands also use Claude Code's built-in **general-purpose** agent for complex multi-step analysis and file searching. It ships with Claude Code and is not defined in this repository.
+
 ### Core Agents
-- **general-purpose** - Complex multi-step analysis, file searching, and coordination
 - **general-solution-architect** - Architecture analysis, technology stack decisions, and design patterns
 - **general-technical-writer** - Documentation creation, formatting, and content organization
+- **general-pm** - Issue creation, prioritization, progress tracking, and lifecycle management
 
 ### Development Agents
 - **general-fullstack-developer** - End-to-end feature implementation spanning multiple layers
 - **general-backend-developer** - API development, database patterns, and server-side logic
 - **general-frontend-developer** - UI/UX implementation, component patterns, and browser automation
+- **general-devops** - Infrastructure automation, CI/CD, container orchestration, and reliability engineering
 
 ### Quality Assurance Agents
 - **general-qa** - Testing strategies, automation, and comprehensive validation
@@ -140,7 +147,7 @@ The following specialized agents are leveraged across all commands to provide ex
 - **general-technical-project-lead** - Security assessments, strategic decisions, and architectural review
 
 ### Agent Usage by Command
-- **`/custom-init`**: general-solution-architect, general-technical-writer, general-purpose
+- **`/custom-init`**: general-solution-architect, general-backend-developer, general-devops, general-qa, general-code-quality-debugger, general-technical-writer (general-purpose as fallback)
 - **`/commit`**: general-code-quality-debugger, general-technical-project-lead
 - **`/issue`**: general-fullstack-developer, general-backend-developer, general-frontend-developer, general-qa, general-purpose
 - **`/reviewpr`**: general-code-quality-debugger, general-technical-project-lead, general-qa, general-solution-architect

@@ -1,3 +1,8 @@
+---
+description: Thoroughly review a GitHub pull request and submit structured feedback
+argument-hint: <pr-number>
+---
+
 # Claude Code User Command: Reviewpr
 
 This command helps you thoroughly review GitHub pull requests specified in $ARGUMENTS.

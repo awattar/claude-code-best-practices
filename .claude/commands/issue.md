@@ -1,3 +1,8 @@
+---
+description: Resolve a GitHub issue end-to-end following GitHub Flow
+argument-hint: <issue-number>
+---
+
 # Claude Code User Command: Issue
 
 This command helps you analyze and fix GitHub issues specified in $ARGUMENTS following GitHub flow best practices.
@@ -38,7 +43,8 @@ Follow these best practices and tools throughout the process:
 
 - Follow GitHub flow in the process whenever possible - https://docs.github.com/en/get-started/using-github/github-flow
 - Use the `/commit` command consistently throughout development to maintain high-quality commit messages and conventional commit standards
-- Consider using context7 (https://github.com/upstash/context7) via MCP throughout the development process to capture important context, decisions, and progress. This helps with task continuity, collaboration, and knowledge preservation.
+- Consider using context7 (https://github.com/upstash/context7) via MCP to pull up-to-date, version-specific documentation for any libraries or frameworks involved in the issue. This keeps generated code aligned with current APIs instead of relying on stale training data.
+- Capture important context, decisions, and progress in the scratchpad/plan file for the issue (see the Plan section below) to maintain task continuity across sessions.
 - Identify the project's browser automation tool for UI testing. Ask if you're unsure whether to use puppeteer, playwright, selenium, or another tool.
 - Remember to use the GitHub CLI (`gh`) for all GitHub-related tasks.
 
